@@ -1,0 +1,451 @@
+/*
+ * Размер шрифта для всех устройств
+ */
+
+@media screen and (min-width: 769px){
+
+    html{
+        font-size: 62.5%;
+    }
+ }
+
+@media screen and (min-width: 641px) and (max-width: 768px){
+
+    html{
+        font-size: 56%;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+    html{
+        font-size: 50%;
+    }
+}
+
+body{
+	font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Helvetica Neue", "Segoe UI", "Arial", sans-serif;
+	font-size: 1.6rem;
+	color: #222;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: touch;
+
+	margin: 0;
+    background-color: #f0f0f0;
+}
+
+/*
+ * типографика
+ */
+
+a{
+    color: #4557bb;
+    text-decoration: none;
+}
+
+a:hover, a:focus{
+	color: #7c249e;
+}
+
+a:focus{
+	outline-color: #7c249e;
+}
+
+p, ul{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+p:last-child, ul:last-child{
+    margin-bottom: 0;
+}
+
+ul{
+    padding: 0 0 0 3rem;
+}
+
+h1{
+    font-size: 2.8rem;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h2{
+    font-size: 2.6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+h3{
+    font-size: 2.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.8rem;
+}
+
+h4{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.title{
+	margin: 0;
+}
+
+.title_xl{
+	font-size: 2.8rem;
+}
+
+.title_s{
+	font-size: 1.8rem;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/*
+ * каркас
+ */
+
+.main-container{
+    display: flex;
+	flex-wrap: wrap;
+    align-items: flex-start;
+
+	max-width: 1300px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+	margin-left: auto;
+    margin-right: auto;
+}
+
+/* блок с контентом */
+
+.content{
+	width: 72%;
+    box-sizing: border-box;
+	margin-left: 3%;
+
+	background-color: #fff;
+	box-shadow: 0 0 2rem .2rem rgba(34, 34, 34, .2);
+}
+
+/* блок с аватаркой */
+
+.profile{
+    width: 25%;
+	background-color: #fff;
+	box-shadow: 0 0 2rem .2rem rgba(34, 34, 34, .2);
+}
+
+.profile__avatar{
+    max-width: 100%;
+    height: auto;
+	display: block;
+}
+
+.profile__group{
+	padding: 1.5rem;
+}
+
+.profile__title{
+    font-size: 3.2rem;
+	line-height: 1.3;
+}
+
+.profile__post{
+    font-size: 1.6rem;
+    font-weight: 400;
+
+	display: block;
+    margin-top: 1rem;
+}
+
+/* контакты */
+
+.contacts{
+	border-top: 2px solid #4557bb;
+	padding-top: 2rem;
+	margin-top: 2rem;
+}
+
+.contacts__group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.contacts__group:first-child{
+    margin-top: 0;
+}
+
+.contacts__name{
+	width: 35%;
+    margin-right: 5%;
+	font-weight: 700;
+}
+
+.contacts__value{
+    width: 60%;
+    text-align: right;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*
+ * контент
+ */
+
+/* раздел */
+
+.section{
+	padding: 5rem 3rem;
+}
+
+.section:nth-child(even){
+	background-color: #f0f0f0;
+}
+
+.section__title{
+	position: relative;
+	padding-bottom: .8rem;
+}
+
+.section__title:after{
+	content: "";
+	width: 5rem;
+	height: 3px;
+	background-color: #4557bb;
+
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.section__content{
+    margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* блок для вывода поста */
+
+.post{
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.post:nth-child(1){
+	margin-top: 0;
+}
+
+.post__link{
+	display: block;
+}
+
+.post__body{
+	padding: 1.5rem;
+}
+
+.post__body{
+	margin-top: 1rem;
+}
+
+/* блок с работой */
+
+.work{
+	position: relative;
+}
+
+.work:before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: #7c249e;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+
+	opacity: 0;
+	transition: opacity .2s ease-out;
+}
+
+.work:hover:before, .work:focus:before{
+	opacity: .8;
+}
+
+.work:hover .work__name, .work:focus .work__name{
+	opacity: 1;
+}
+
+.work__name{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	opacity: 0;
+	transition: opacity .2s ease-out;
+
+	font-size: 2rem;
+	color: #fff;
+	padding: .5rem;
+	text-align: center;
+}
+
+/* меню */
+
+.nav{
+    font-size: 1.4rem;
+    padding: 1.5rem 3rem;
+    background-color: #f0f0f0;
+}
+
+.nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__list-item{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .5rem;
+    color: #222;
+}
+
+.nav__list-item{
+    font-weight: 700;
+}
+
+.nav__list-item:after{
+    content: "/";
+    display: inline-block;
+    margin-left: .5rem;
+}
+
+.nav__list-item_active:after{
+    display: none;
+}
+
+/* блок с детальным описанием */
+
+.article{
+    padding: 5rem 3rem;
+}
+
+.article__title{
+    margin-bottom: 2rem;
+}
+
+/*
+ * медиа выражения
+ */
+
+@media screen and (max-width: 1024px){
+
+	.profile{
+        width: 100%;
+        margin-top: 3rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 3rem;
+	}
+
+	.profile__imgbox{
+		width: 18rem;
+		height: 18rem;
+
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 3rem;
+
+		border: 5px solid #4557bb;
+		box-shadow: 0 0 2rem .2rem rgba(34, 34, 34, .2);
+	}
+
+	.profile__group{
+		width: 100%;
+		padding: 0;
+	}
+
+	.profile__title{
+		text-align: center;
+	}
+
+    .content{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (min-width: 1025px){
+
+	.post{
+		width: 32%;
+	}
+
+	.post:nth-child(3n+2){
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+
+	.post:nth-child(2), .post:nth-child(3){
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px){
+
+	.post{
+		width: 49%;
+	}
+
+	.post:nth-child(2n+1){
+		margin-right: 1%;
+	}
+
+	.post:nth-child(2n+2){
+		margin-left: 1%;
+	}
+}
+
+@media screen and (min-width: 481px){
+
+	.post{
+		margin-top: 2%;
+	}
+
+	.post:nth-child(2){
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 480px){
+
+	.post{
+		width: 100%;
+		margin-top: 3rem;
+	}
+}
